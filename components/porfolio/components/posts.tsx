@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { formatDate, getPortfolioPosts } from "@/app/portfolio/utils";
+import { formatDate, getPortfolioPosts } from "@/app/[locale]/portfolio/utils";
 
 export function PortfolioPosts() {
   let allPortfolios = getPortfolioPosts();

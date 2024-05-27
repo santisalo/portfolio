@@ -3,7 +3,7 @@ import { Metadata, Viewport } from "next";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { ViewTransitions } from "next-view-transitions";
-import { getMessages } from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
 import { Providers } from "./providers";
@@ -33,7 +33,11 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
 };
+const locales = ["en", "es"];
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 export default async function LocaleLayout({
   children,
   params: { locale },
@@ -42,6 +46,8 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   const messages = await getMessages();
+
+  unstable_setRequestLocale(locale);
 
   return (
     <ViewTransitions>

@@ -3,6 +3,8 @@ import { Divider } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 // import Link from "next/link";
 
+import { unstable_setRequestLocale } from "next-intl/server";
+
 import { getMyAge } from "./utils";
 import { getPortfolioPosts } from "./portfolio/utils";
 
@@ -11,13 +13,13 @@ import { title } from "@/components/primitives";
 import InterestChip from "@/components/InterestChip";
 import MyHistory from "@/components/MyHistory";
 import { PostList } from "@/components/porfolio/components/PostList";
-
 import "./style.css";
 import { IconPackLinkedin } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import LinkLocale from "@/components/LinkLocale";
 
 export default function Home({ params }: any) {
+  unstable_setRequestLocale(params.locale);
   const t = useTranslations("Home");
   const posts = getPortfolioPosts(params.locale);
 

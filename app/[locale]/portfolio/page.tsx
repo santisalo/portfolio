@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 import { getPortfolioPosts } from "./utils";
 
@@ -9,8 +10,14 @@ export const metadata = {
   title: "Mi Portfolio",
   description: "Son mis clientes.",
 };
+const locales = ["en", "es"];
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default function Page({ params }: any) {
+  unstable_setRequestLocale(params.locale);
   const { locale } = params;
   const t = useTranslations("Portfolio");
 

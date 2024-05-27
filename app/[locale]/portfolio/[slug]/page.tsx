@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 import { getPortfolioPosts } from "../utils";
 import { baseUrl } from "../../sitemap";
@@ -7,10 +8,19 @@ import ProjectPageContent from "@/components/ProjectPageContent";
 
 export async function generateStaticParams({ params }: any) {
   let posts = getPortfolioPosts(params.locale);
+  let locales = ["en", "es"];
+  let postsLocales = [];
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  locales.forEach((locale) => {
+    postsLocales = [
+      ...posts.map((post) => ({
+        slug: post.slug,
+        locale: locale,
+      })),
+    ];
+  });
+
+  return postsLocales;
 }
 
 export function generateMetadata({ params }: any) {
@@ -40,6 +50,7 @@ export function generateMetadata({ params }: any) {
 }
 
 export default function Portfolio({ params }: any) {
+  unstable_setRequestLocale(params.locale);
   let post = getPortfolioPosts(params.locale).find(
     (post) => post.slug === params.slug,
   );
