@@ -32,8 +32,9 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
+    github: "https://github.com/santisalo",
+    instagram: "https://instagram.com/santisalo",
+    linkedin: "https://www.linkedin.com/in/santiago-salomon-63549614b/",
     docs: "https://nextui.org",
     discord: "https://discord.gg/9b6yyZKmH4",
     sponsor: "https://patreon.com/jrgarciadev",

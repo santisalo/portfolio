@@ -7,36 +7,35 @@ import {
   Link,
 } from "@nextui-org/react";
 
-import { IconPackLinkedin } from "./icons";
+type InfoCardProps = {
+  title: string;
+  content: string;
+  footer: string;
+  icon: JSX.Element;
+  url: string;
+};
 
-export default function InfoCard() {
+export default function InfoCard(props: InfoCardProps) {
   return (
     <Card className="max-w-[400px]">
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
-          <p className="m-2 text-3xl font-bold">Sobre Mí</p>
-          {/* <p className="text-small text-default-500">nextui.org</p> */}
+          <p className="m-2 text-3xl font-bold">{props.title}</p>
         </div>
       </CardHeader>
       <Divider />
       <CardBody>
-        <p className="text-lg">
-          Lo que me gusta hacer es resolver problemas y en el desarrollo de
-          software encontré muchas herramientas para hacer eso que me gusta
-          tanto! Lo que me gusta hacer es resolver problemas y en el desarrollo
-          de software encontré muchas herramientas para hacer eso que me gusta
-          tanto!
-        </p>
+        <p className="text-justify">{props.content}</p>
       </CardBody>
       <Divider />
       <CardFooter>
         <Link
           isExternal
           showAnchorIcon
-          anchorIcon={<IconPackLinkedin height={36} width={36} />}
-          href="https://github.com/nextui-org/nextui"
+          anchorIcon={props.icon}
+          href={props.url}
         >
-          Ver mas en mi LinkedIn
+          {props.footer}
         </Link>
       </CardFooter>
     </Card>

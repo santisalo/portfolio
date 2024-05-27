@@ -1,0 +1,24 @@
+{
+  "Home": {
+    "title": "Hola, soy",
+    "aboutMe": "Sobre Mí",
+    "aboutMeContent": "Desde joven, descubrí mi pasión por resolver problemas y encontré en el desarrollo de software la herramienta perfecta. A los 14 años, empecé a programar, convirtiendo un hobby en una carrera. Tras la secundaria, estudié Ingeniería en Informática y me capacité en varios lenguajes. Actualmente, trabajo en una consultora, disfrutando de aprender y crecer profesionalmente. Mi objetivo es seguir desarrollándome en el campo del software, aportando soluciones innovadoras y eficientes a los desafíos que surjan.",
+    "moreOnMyLinkedin": "Ver mas en mi LinkedIn",
+    "fullStackDev": "Fullstack Dev",
+    "computerEngineer": "Ingeniero en Informática",
+    "argentine": "Argentino",
+    "years": "años",
+    "traveler": "Viajero",
+    "footballer": "Futbolero",
+    "technologies": "Tecnologías",
+    "workExperience": "Mi Camino",
+    "featuredProjects": "Proyectos Destacados",
+    "moreProjects": "Ver mas Proyectos..."
+  },
+  "Portfolio": {
+    "title": "Mi Portfolio"
+  },
+  "Blog": {
+    "comingSoon": "Coming Soon..."
+  }
+}

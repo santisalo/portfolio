@@ -1,8 +1,10 @@
-import { getPortfolioPosts } from "@/app/portfolio/utils";
 import ProjectCard from "@/components/ProjectCard";
-
-export function PostList() {
-  let allPortfolios = getPortfolioPosts();
+type PostListProps = {
+  limit?: number;
+  posts: any[];
+};
+export function PostList(props: PostListProps) {
+  let allPortfolios = props.posts;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -16,11 +18,13 @@ export function PostList() {
 
           return 1;
         })
-        .map((post) => (
+        .slice(0, props.limit)
+        .map((post, i) => (
           <ProjectCard
-            key={post.metadata.id}
+            key={i + "-" + post.metadata.id}
             imageUrl={post.metadata.imageUrl}
             projectType={post.metadata.projectType}
+            slug={post.slug}
             technology={post.metadata.technology}
             title={post.metadata.title}
           />

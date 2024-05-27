@@ -30,6 +30,111 @@ export const Logo: React.FC<IconSvgProps> = ({
   </svg>
 );
 
+export function LinkedInIcon(props: any) {
+  return (
+    <svg
+      className="h-full w-full"
+      viewBox="0 0 512 512"
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        fill="transparent"
+        height="512"
+        paintOrder="stroke"
+        rx="0"
+        stroke="transparent"
+        strokeOpacity="100%"
+        strokeWidth="0"
+        width="512"
+        x="0"
+        y="0"
+      />
+      <svg
+        fill="currentColor"
+        height="512px"
+        role="img"
+        viewBox="0 0 1024 1024"
+        width="512px"
+        x="0"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <g fill="currentColor">
+          <path
+            d="M196.064.25C88.347.25.187 88.408.187 196.127v607.841c0 107.717 88.158 195.845 195.877 195.845h607.841c107.718 0 195.845-88.127 195.845-195.845V196.127C999.75 88.41 911.623.25 803.905.25H196.064zm49.266 164.948c51.648 0 83.461 33.906 84.443 78.475c0 43.585-32.797 78.444-85.442 78.444h-.969c-50.665 0-83.412-34.857-83.412-78.444c0-44.568 33.738-78.475 85.379-78.475zm445.08 208.31c99.329 0 173.79 64.922 173.79 204.436v260.449H713.247V595.406c0-61.06-21.847-102.718-76.476-102.718c-41.704 0-66.562 28.078-77.476 55.202c-3.987 9.704-4.967 23.257-4.967 36.832v253.671H403.375s1.981-411.613 0-454.233h150.984v64.324c20.06-30.95 55.942-74.977 136.051-74.977zm-521.556 10.685h150.953v454.202H168.854V384.193z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </svg>
+  );
+}
+export function InstagramIcon(props: any) {
+  return (
+    <svg
+      className="h-full w-full"
+      {...props}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        fill="transparent"
+        height="512"
+        paintOrder="stroke"
+        rx="30"
+        stroke="transparent"
+        strokeOpacity="100%"
+        strokeWidth="0"
+        width="512"
+        x="0"
+        y="0"
+      />
+      <svg
+        fill="currentColor"
+        height="512px"
+        role="img"
+        viewBox="0 0 1024 1024"
+        width="512px"
+        x="0"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <g fill="currentColor">
+          <path
+            d="M603.575 510.854c0-54.044-44.172-98.02-98.463-98.02c-54.285 0-98.455 43.977-98.455 98.02c0 54.058 44.17 98.026 98.455 98.026c54.291 0 98.463-43.968 98.463-98.026zM749.855.602H250.142C112.465.602.456 112.124.456 249.199v69.266h367.413c38.769-27.496 86.118-43.739 137.243-43.739c51.124 0 98.48 16.243 137.251 43.739H999.54v-69.266C999.54 112.123 887.531.602 749.855.602zm101.12 236.435c0 15.191-12.48 27.622-27.743 27.622h-85.72c-15.261 0-27.743-12.431-27.743-27.622v-85.352c0-15.19 12.481-27.622 27.743-27.622h85.72c15.262 0 27.743 12.43 27.743 27.622v85.352zM742.287 510.854c0 130.215-106.402 236.133-237.176 236.133c-130.778 0-237.17-105.918-237.17-236.133c0-35.848 8.11-69.845 22.532-100.318H.456v340.263c0 137.085 112.009 248.597 249.686 248.597h499.714c137.676 0 249.685-111.513 249.685-248.597V410.536H719.755c14.422 30.473 22.532 64.47 22.532 100.318z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </svg>
+  );
+}
+
+export function GraduateIcon(props: any) {
+  return (
+    <svg
+      fill="currentColor"
+      {...props}
+      id="lni_lni-graduation"
+      version="1.1"
+      viewBox="0 0 64 64"
+      x="0px"
+      xmlSpace="preserve"
+      xmlns="http://www.w3.org/2000/svg"
+      y="0px"
+    >
+      <path
+        d="M61.5,34l-4.2-4.3v-3.8c0.6-0.7,1-1.6,1-2.6c0-1.5-0.8-2.8-2.2-3.4L31.6,8.9c-0.9-0.4-2-0.4-3,0L4,19.8
+	c-1.3,0.6-2.2,1.9-2.2,3.4c0,1.5,0.9,2.8,2.2,3.4l8.4,3.8v11.8c0,7.3,5.9,13.2,13.1,13.2h9.1c7.3,0,13.1-5.9,13.1-13.2V30.6l4.8-2.2
+	l0.3-0.1v1.6l-4,4.1c-1.1,1.1-1.1,2.8,0,3.9l4.3,4.5c0.5,0.5,1.2,0.8,2,0.8c0,0,0,0,0,0c0.7,0,1.5-0.3,2-0.8l4.3-4.5
+	C62.5,36.8,62.5,35.1,61.5,34z M43.2,42.2c0,4.8-3.9,8.7-8.6,8.7h-9.1c-4.8,0-8.6-3.9-8.6-8.7v-9.7l11.9,5.4c0.5,0.2,1,0.3,1.5,0.3
+	s1-0.1,1.5-0.3l11.4-5.1V42.2z M30.3,33.5L7.4,23.2l22.7-10l22.6,10.2L30.3,33.5z M55.1,38l-2-2l2-2l2,2L55.1,38z"
+      />
+    </svg>
+  );
+}
+
 export const DiscordIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
@@ -235,6 +340,108 @@ export const SendIcon = (props: IconImgProps) => (
     src="data:image/png;base64,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"
   />
 );
+
+export const SpanishIcon = (props: any) => {
+  return (
+    <svg
+      className="h-full w-full"
+      {...props}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        fill="transparent"
+        height="512"
+        paintOrder="stroke"
+        rx="30"
+        stroke="transparent"
+        strokeOpacity="100%"
+        strokeWidth="0"
+        width="512"
+        x="0"
+        y="0"
+      />
+      <svg
+        fill="currentColor"
+        height="512px"
+        role="img"
+        viewBox="0 0 512 512"
+        width="512px"
+        x="0"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <g fill="currentColor">
+          <mask id="circleFlagsEsVariant0">
+            <circle cx="256" cy="256" fill="#fff" r="256" />
+          </mask>
+          <g mask="url(#circleFlagsEsVariant0)">
+            <path
+              d="M0 0h512v128l-39.8 130.3L512 384v128H0V384l37.8-124L0 128z"
+              fill="#d80027"
+            />
+            <path d="M0 128h512v256H0z" fill="#ffda44" />
+          </g>
+        </g>
+      </svg>
+    </svg>
+  );
+};
+export const EnglishIcon = (props: any) => {
+  return (
+    <svg
+      className="h-full w-full"
+      {...props}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        fill="transparent"
+        height="512"
+        paintOrder="stroke"
+        rx="30"
+        stroke="transparent"
+        strokeOpacity="100%"
+        strokeWidth="0"
+        width="512"
+        x="0"
+        y="0"
+      />
+      <svg
+        fill="currentColor"
+        height="512px"
+        role="img"
+        viewBox="0 0 512 512"
+        width="512px"
+        x="0"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <g fill="currentColor">
+          <mask id="circleFlagsUs0">
+            <circle cx="256" cy="256" fill="#fff" r="256" />
+          </mask>
+          <g mask="url(#circleFlagsUs0)">
+            <path
+              d="M256 0h256v64l-32 32l32 32v64l-32 32l32 32v64l-32 32l32 32v64l-256 32L0 448v-64l32-32l-32-32v-64z"
+              fill="#eee"
+            />
+            <path
+              d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"
+              fill="#d80027"
+            />
+            <path d="M0 0h256v256H0Z" fill="#0052b4" />
+            <path
+              d="m187 243l57-41h-70l57 41l-22-67zm-81 0l57-41H93l57 41l-22-67zm-81 0l57-41H12l57 41l-22-67zm162-81l57-41h-70l57 41l-22-67zm-81 0l57-41H93l57 41l-22-67zm-81 0l57-41H12l57 41l-22-67Zm162-82l57-41h-70l57 41l-22-67Zm-81 0l57-41H93l57 41l-22-67zm-81 0l57-41H12l57 41l-22-67Z"
+              fill="#eee"
+            />
+          </g>
+        </g>
+      </svg>
+    </svg>
+  );
+};
+
 export const NextUILogo: React.FC<IconSvgProps> = (props) => {
   const { width, height = 40 } = props;
 

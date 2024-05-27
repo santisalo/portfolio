@@ -1,0 +1,24 @@
+{
+  "Home": {
+    "title": "Hi, I'm",
+    "aboutMe": "About me",
+    "aboutMeContent": "From a young age, I discovered my passion for problem-solving and found software development to be the perfect tool. At 14, I began programming, turning a hobby into a career. After high school, I studied Computer Engineering and trained in various programming languages. Currently, I work at a consulting firm, enjoying the chance to learn and grow professionally. My goal is to keep developing in the software field, contributing innovative and efficient solutions to emerging challenges.",
+    "moreOnMyLinkedin": "More on my LinkedIn",
+    "fullStackDev": "Fullstack Dev",
+    "computerEngineer": "Computer Engineer",
+    "argentine": "Argentina",
+    "years": "years",
+    "traveler": "Traveler",
+    "footballer": "Futbol Lover",
+    "technologies": "Technologies",
+    "workExperience": "Work Experience",
+    "featuredProjects": "Featured Projects",
+    "moreProjects": "More Projects..."
+  },
+  "Portfolio": {
+    "title": "Portfolio"
+  },
+  "Blog": {
+    "comingSoon": "Coming Soon..."
+  }
+}

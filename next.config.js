@@ -1,12 +1,14 @@
+const createNextIntlPlugin = require('next-intl/plugin');
+ 
+const withNextIntl = createNextIntlPlugin(  
+  './i18n.ts'
+);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    // ignoreBuildErrors: true,
-  },
+  
+  output: 'export',
+  reactStrictMode: false,
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

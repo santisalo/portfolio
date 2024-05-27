@@ -2,7 +2,7 @@ import { Avatar } from "@nextui-org/react";
 
 export default function MyHistory(props: any) {
   return (
-    <div className="px-2 py-10 rounded-3xl lg:px-16 bg-slate-950">
+    <div className="px-4 py-10 rounded-3xl lg:px-16 bg-default-100">
       <div className="w-full flex pb-6">
         <div>
           <p className="text-5xl">Getronics</p>
@@ -12,7 +12,12 @@ export default function MyHistory(props: any) {
       </div>
       <div className="w-full flex mb-[-15px]">
         <div className="ps-10 mt-[-10px]">
-          <Avatar color="success" name=" " size="sm" />
+          <Avatar
+            className="animate-pulse"
+            color="success"
+            name=" "
+            size="sm"
+          />
         </div>
         <div className="grow border-t-4 border-green-800 mt-1" />
         <div />

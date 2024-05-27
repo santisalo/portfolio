@@ -9,17 +9,20 @@ import {
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
+import { Link as LinkVT } from "next-view-transitions";
 import { link as linkStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
 import clsx from "clsx";
+
+import LinkLocale from "./LinkLocale";
+import LangSwitcher from "./LangSwitcher";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  TwitterIcon,
   GithubIcon,
-  DiscordIcon,
-  SendIcon,
+  GraduateIcon,
+  InstagramIcon,
+  LinkedInIcon,
 } from "@/components/icons";
 
 export const Navbar = () => {
@@ -27,14 +30,14 @@ export const Navbar = () => {
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <LinkVT className="flex justify-start items-center gap-1" href="/">
             <p className="font-bold text-inherit">SANTIAGO SALOMON</p>
-          </NextLink>
+          </LinkVT>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <NextLink
+              <LinkLocale
                 className={clsx(
                   linkStyles({ color: "foreground" }),
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
@@ -43,7 +46,7 @@ export const Navbar = () => {
                 href={item.href}
               >
                 {item.label}
-              </NextLink>
+              </LinkLocale>
             </NavbarItem>
           ))}
         </ul>
@@ -54,14 +57,29 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
+          <Link
+            isExternal
+            aria-label="Github"
+            className="text-default-500"
+            href={siteConfig.links.github}
+          >
+            <GithubIcon height={24} width={24} />
           </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
+          <Link
+            isExternal
+            aria-label="Instagram"
+            className="text-default-500"
+            href={siteConfig.links.instagram}
+          >
+            <InstagramIcon height={20} width={20} />
           </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
+          <Link
+            isExternal
+            aria-label="Linkedin"
+            className="text-default-500"
+            href={siteConfig.links.linkedin}
+          >
+            <LinkedInIcon height={20} width={20} />
           </Link>
           <ThemeSwitch />
         </NavbarItem>
@@ -70,13 +88,15 @@ export const Navbar = () => {
             isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<SendIcon height={24} width={24} />}
+            download={"cv.pdf"}
+            href="/pdf/cv.pdf"
+            startContent={<GraduateIcon height={24} width={24} />}
             variant="flat"
           >
-            Compartir
+            Mi CV
           </Button>
         </NavbarItem>
+        <LangSwitcher />
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
