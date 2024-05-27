@@ -6,14 +6,14 @@ import { baseUrl } from "../../sitemap";
 
 import ProjectPageContent from "@/components/ProjectPageContent";
 
-export async function generateStaticParams({ params }: any) {
-  let posts = getPortfolioPosts(params.locale);
+export async function generateStaticParams() {
   let locales = ["en", "es"];
   let postsLocales = [];
 
   locales.forEach((locale) => {
     postsLocales = [
-      ...posts.map((post) => ({
+      ...postsLocales,
+      ...getPortfolioPosts(locale).map((post) => ({
         slug: post.slug,
         locale: locale,
       })),
