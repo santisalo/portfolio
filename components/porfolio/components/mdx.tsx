@@ -48,6 +48,20 @@ function CustomLink(props: any) {
   );
 }
 
+const CustomUnorderedList = ({ children }) => {
+  return (
+    <ul style={{ paddingLeft: "20px", listStyleType: "disc" }}>{children}</ul>
+  );
+};
+
+const CustomOrderedList = ({ children }) => {
+  return <ol style={{ paddingLeft: "20px" }}>{children}</ol>;
+};
+
+const CustomListItem = ({ children }) => {
+  return <li style={{ margin: "10px 0" }}>{children}</li>;
+};
+
 function RoundedImage(props: any) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
@@ -72,10 +86,20 @@ function slugify(str: any) {
 function createHeading(level: any) {
   const Heading = ({ children }: any) => {
     let slug = slugify(children);
+    let level2size = [
+      "mb-2 text-sm",
+      "mb-2 text-5xl",
+      "mb-2 text-4xl",
+      "mb-2 text-2xl",
+      "mb-2 text-xl",
+      "mb-2 text-lg",
+      "mb-2 text-md",
+      "mb-2 text-sm",
+    ];
 
     return React.createElement(
       `h${level}`,
-      { id: slug },
+      { id: slug, className: level2size[level] },
       [
         React.createElement("a", {
           href: `#${slug}`,
@@ -99,10 +123,14 @@ let components = {
   h4: createHeading(4),
   h5: createHeading(5),
   h6: createHeading(6),
+  p: (props: any) => <p className="my-4" {...props} />,
   Image: RoundedImage,
   a: CustomLink,
   code: Code,
   Table,
+  ul: CustomUnorderedList,
+  ol: CustomOrderedList,
+  li: CustomListItem,
 };
 
 export function CustomMDX(props: any) {

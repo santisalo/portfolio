@@ -18,6 +18,15 @@ export default function LangSwitcher() {
   }, []);
 
   const handleChangeLocale = (val) => {
+    if (pathname.endsWith(".es") || pathname.endsWith(".en")) {
+      let newPathname = pathname.slice(0, -2);
+
+      newPathname += val;
+
+      router.replace(newPathname, { locale: val });
+
+      return;
+    }
     setLocale(val);
     router.replace(pathname, { locale: val });
   };

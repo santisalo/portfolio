@@ -2,14 +2,11 @@ import { Chip } from "@nextui-org/react";
 import Image from "next/image";
 
 import { tech2color } from "./utils";
+import { CustomMDX } from "./porfolio/components/mdx";
 
 import { removeDotFromSlug } from "@/app/[locale]/utils";
 type ProjectCardProps = {
-  slug: string;
-  title: string;
-  projectType: string;
-  technology: string;
-  imageUrl?: string;
+  post: any;
 };
 
 export default function ProjectPageContent(props: ProjectCardProps) {
@@ -18,22 +15,24 @@ export default function ProjectPageContent(props: ProjectCardProps) {
       <h1
         className="font-bold text-4xl mb-1 text-center lg:text-left"
         style={{
-          viewTransitionName: "project-title-" + removeDotFromSlug(props.slug),
+          viewTransitionName:
+            "project-title-" + removeDotFromSlug(props.post.slug),
         }}
       >
-        {props.title}
+        {props.post.metadata.title}
       </h1>
       <h2
         className="text-tiny mb-1 uppercase font-bold mb-1 text-center lg:text-left"
         style={{
-          viewTransitionName: "project-type-" + removeDotFromSlug(props.slug),
+          viewTransitionName:
+            "project-type-" + removeDotFromSlug(props.post.slug),
         }}
       >
-        {props.projectType}
+        {props.post.metadata.projectType}
       </h2>
 
       <div className="mb-3  text-center lg:text-left">
-        {props.technology.split(",").map((tech, i) => (
+        {props.post.metadata.technology.split(",").map((tech, i) => (
           <Chip
             key={i + "-" + tech}
             className="mr-1 mb-1"
@@ -50,17 +49,19 @@ export default function ProjectPageContent(props: ProjectCardProps) {
         <div className="flex justify-center lg:me-10">
           <Image
             alt="Card background"
-            className="object-cover rounded-xl max-w-full object-top border-2 border-slate-500 hover:transform hover:scale-105 transition-all"
+            className="object-cover rounded-xl mb-10 h-full min-w-80 max-h-[400px] lg:min-w-[460px] lg:max-h-[720px] object-top border-2 border-slate-500 hover:transform hover:scale-105 transition-all"
             height={640}
-            src={props.imageUrl}
+            src={props.post.metadata.imageUrl}
             style={{
               viewTransitionName:
-                "project-image-" + removeDotFromSlug(props.slug),
+                "project-image-" + removeDotFromSlug(props.post.slug),
             }}
             width={360}
           />
         </div>
-        <div>asdasdas</div>
+        <div>
+          <CustomMDX source={props.post.content} />
+        </div>
       </div>
     </div>
   );

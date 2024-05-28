@@ -79,13 +79,7 @@ export default function Portfolio({ params }: any) {
         suppressHydrationWarning
         type="application/ld+json"
       />
-      <ProjectPageContent
-        imageUrl={post.metadata.imageUrl}
-        projectType={post.metadata.projectType}
-        slug={post.slug}
-        technology={post.metadata.technology}
-        title={post.metadata.title}
-      />
+      <ProjectPageContent post={post} />
     </section>
   );
 }
