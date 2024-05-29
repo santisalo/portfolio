@@ -1,41 +1,37 @@
 ---
 title: 'App Validación por GPS'
 projectType: 'App Móvil + Panel de Control'
-technology: 'Capacitor, React, Laravel, GPS'
+technology: 'Capacitor, React, Laravel, GPS, Biometría'
 imageUrl: '/img/portfolio/gps-validation-app.jpeg'
-publishedAt: '2024-04-09'
+publishedAt: '2024-04-07'
 ---
+## Descripción del Proyecto
 
-In the world of software development, where the latest and greatest tools frequently capture the spotlight, Vim stands out as a timeless classic. Despite its age and initial complexity, Vim has managed to retain a devoted following of developers who swear by its efficiency, versatility, and power.
+**App Validación por GPS** es un proyecto que consta de un **Panel de Control** para administradores y una **Aplicación Móvil** para usuarios finales. Es utilizada por los administradores del sistema para que los usuarios validen su geolocalización al realizar trabajos en lugares específicos a horas determinadas.
 
-This article delves into the reasons behind Vim's enduring appeal and why it continues to be a great tool for coding in the modern era.
+## Funcionalidad
 
-## Efficiency and Speed
+### Panel de Control para Administradores
+A través del panel de control, los administradores del sistema pueden:
 
-At the heart of Vim's philosophy is the idea of minimizing keystrokes to achieve maximum efficiency.
+- **Crear, editar y eliminar usuarios**: Gestionar cuentas de usuario.
+- **Visualizar todas las órdenes de trabajo en un mapa**: Monitorear las tareas asignadas.
 
-Unlike other text editors where the mouse is often relied upon for navigation and text manipulation, Vim's keyboard-centric design allows developers to perform virtually all coding tasks without leaving the home row. This not only speeds up coding but also reduces the risk of repetitive strain injuries.
+### Aplicación Móvil para Usuarios
+Mediante la aplicación móvil, los usuarios pueden:
 
-## Highly Customizable
+- **Iniciar sesión con sus datos**: Acceder a su cuenta personal.
+- **Cargar una nueva orden de trabajo**: Registrar nuevas tareas.
+- **Validar su geolocalización con huella dactilar**: Confirmar su ubicación mediante huella dactilar, incluso sin conexión a internet.
+- **Envío de datos asíncrono**: Enviar datos de validación una vez que se restablezca la conexión a internet.
 
-Vim can be extensively customized to suit any developer's preferences and workflow. With a vibrant ecosystem of plugins and a robust scripting language, users can tailor the editor to their specific needs, whether it's programming in Python, writing in Markdown, or managing projects.
+## Desafíos
 
-This level of customization ensures that Vim remains relevant and highly functional for a wide range of programming tasks and languages.
+El desarrollo de **App Validación por GPS** enfrentó varios desafíos significativos:
 
-## Ubiquity and Portability
+- **Funcionalidad offline**: Garantizar que el sistema pudiera almacenar datos localmente en el teléfono y sincronizarse con la base de datos una vez detectada una conexión a internet.
+- **Seguridad biométrica**: Implementar un sistema de validación biométrica confiable para garantizar la identidad del usuario al validar tareas. La aplicación debía detectar cuándo los usuarios agregaban nuevas huellas dactilares a sus dispositivos y solicitarles que se registraran nuevamente en la aplicación para evitar validaciones no autorizadas.
 
-Vim is virtually everywhere. It's available on all major platforms, and because it's lightweight and terminal-based, it can be used on remote servers through SSH, making it an indispensable tool for sysadmins and developers working in a cloud-based environment.
+## Conclusión
 
-The ability to use the same editor across different systems without a graphical interface is a significant advantage for those who need to maintain a consistent workflow across multiple environments.
-
-## Vibrant Community
-
-Despite—or perhaps because of—its learning curve, Vim has cultivated a passionate and active community. Online forums, dedicated websites, and plugins abound, offering support, advice, and improvements.
-
-This community not only helps newcomers climb the steep learning curve but also continually contributes to Vim's evolution, ensuring it remains adaptable and up-to-date with the latest programming trends and technologies.
-
-## Conclusion
-
-Vim is not just a text editor; it's a way of approaching coding with efficiency and thoughtfulness. Its steep learning curve is a small price to pay for the speed, flexibility, and control it offers.
-
-For those willing to invest the time to master its commands, Vim proves to be an invaluable tool that enhances productivity and enjoyment in coding. In an age of ever-changing development tools, the continued popularity of Vim is a testament to its enduring value and utility.
+**App Validación por GPS** es una solución robusta y versátil para la validación de geolocalización en la gestión de tareas. La aplicación mejora la eficiencia y seguridad al permitir que los usuarios validen su presencia en lugares específicos y horas determinadas utilizando datos biométricos, incluso sin conexión a internet. Los administradores se benefician de un panel de control completo para gestionar usuarios y monitorear órdenes de trabajo de manera efectiva. Este proyecto demuestra la capacidad de integrar tecnologías avanzadas para crear una plataforma confiable y segura que satisfaga las necesidades tanto de los administradores como de los usuarios finales.

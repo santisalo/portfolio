@@ -98,6 +98,9 @@ export default function Home({ params }: any) {
           <Code color="primary" size="lg">
             Capacitor
           </Code>
+          <Code color="danger" size="lg">
+            Cordova
+          </Code>
           <Code color="warning" size="lg">
             HTML5
           </Code>
@@ -106,6 +109,9 @@ export default function Home({ params }: any) {
           </Code>
           <Code color="warning" size="lg">
             Javascript
+          </Code>
+          <Code color="success" size="lg">
+            PHP
           </Code>
           <Code color="secondary" size="lg">
             Jquery
@@ -116,8 +122,17 @@ export default function Home({ params }: any) {
           <Code color="warning" size="lg">
             Java
           </Code>
+          <Code color="primary" size="lg">
+            Liferay
+          </Code>
           <Code color="success" size="lg">
-            PHP
+            Joomla
+          </Code>
+          <Code color="primary" size="lg">
+            Wordpress
+          </Code>
+          <Code color="secondary" size="lg">
+            Elementor
           </Code>
           <Code color="primary" size="lg">
             Google Cloud

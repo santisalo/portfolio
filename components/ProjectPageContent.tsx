@@ -49,7 +49,7 @@ export default function ProjectPageContent(props: ProjectCardProps) {
         <div className="flex justify-center lg:me-10">
           <Image
             alt="Card background"
-            className="object-cover rounded-xl mb-10 h-full min-w-80 max-h-[400px] lg:min-w-[460px] lg:max-h-[720px] object-top border-2 border-slate-500 hover:transform hover:scale-105 transition-all"
+            className="object-cover rounded-xl mb-10 h-full min-w-80 max-h-[400px] lg:min-w-[425px] lg:max-h-[720px] object-top border-2 border-slate-500 hover:transform hover:scale-105 transition-all"
             height={640}
             src={props.post.metadata.imageUrl}
             style={{

@@ -11,7 +11,7 @@ export function PostList(props: PostListProps) {
       {allPortfolios
         .sort((a, b) => {
           if (
-            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
+            new Date(a.metadata.publishedAt) < new Date(b.metadata.publishedAt)
           ) {
             return -1;
           }

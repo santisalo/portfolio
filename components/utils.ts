@@ -22,6 +22,11 @@ const techs = {
   "Sony Vegas": "danger",
   Realtime: "primary",
   "Instagram API": "secondary",
+  Wordpress: "primary",
+  Elementor: "secondary",
+  "Ant Design": "warning",
+  CoreUI: "primary",
+  Vuetify: "primary",
 };
 
 export const tech2color = (tech: string) => {
