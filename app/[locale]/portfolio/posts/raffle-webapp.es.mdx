@@ -7,33 +7,28 @@ publishedAt: '2024-04-02'
 ---
 ## Descripción del Proyecto
 
-**Bingo App** es un proyecto compuesto por un **sitio web estático** y un **panel de control** desarrollado con **Vue.js** y **Laravel**. El sitio web muestra a los usuarios los sorteos anteriores junto con sus grabaciones y los ganadores. También incluye la transmisión en vivo y el monto del pozo acumulado.
+**Sorteos Webapp** es una aplicación web diseñada para que una empresa realice sorteos en línea, permitiendo a los usuarios cargar sus datos personales y los detalles de un producto específico para participar.
 
-Hay dos paneles de control: uno para el usuario y otro para el administrador. El panel de usuario permite comprar créditos, adquirir cartones de bingo, solicitar pagos a CBU, jugar en línea de manera interactiva, entre otras funciones. Por su parte, el administrador del sistema tiene un panel donde puede cargar nuevos sorteos, gestionar parámetros y registrar los resultados. Además, el proyecto cuenta con un sistema de mailing automático para notificar a los ganadores de los sorteos.
+### Funcionalidad
 
-## Funcionalidad
+1. **Registro del Cliente:**
+   - El usuario ingresa su email.
+   - Si el email no existe en la base de datos, se registra al usuario con sus datos personales.
 
-Los administradores y operadores del negocio, a través del panel de control, pueden:
+2. **Participación en el Sorteo:**
+   - El usuario introduce el código y la hora del producto.
+   - El usuario participa instantáneamente en un sorteo donde puede ganar uno de los premios preconfigurados.
 
-- Crear, editar y eliminar sorteos
-- Crear, editar y eliminar usuarios
-- Gestionar pagos
-- Registrar ganadores
-- Vender créditos y cartones de bingo
-- Generar informes
+3. **Sorteo Global:**
+   - Todos los usuarios participan en un sorteo global, el cual se realiza cuando se llega a la fecha de finalización del sorteo.
 
-Los clientes finales, mediante la webapp, pueden:
+### Desafíos
 
-- Visualizar sus movimientos
-- Visualizar y participar en sorteos
-- Comprar créditos
-- Comprar cartones de bingo
-- Jugar de manera interactiva
+El desarrollo de **Sorteos Webapp** presentó varios desafíos significativos:
 
-## Desafíos
+- **Plazos Ajustados:** El proyecto debía completarse en un tiempo limitado, siguiendo el diseño proporcionado por el equipo de UX.
+- **Generación de Informes:** Fue necesario desarrollar funcionalidades para generar informes en Excel, permitiendo a la empresa recopilar y analizar los datos de los participantes de manera eficiente.
 
-Este proyecto surgió durante la pandemia y fue crucial para que el Bingo pudiera seguir operando a pesar de las restricciones. Uno de los desafíos principales fue coordinar los sorteos transmitidos por streaming con la sección de juego interactivo en línea. También fue necesario implementar un sistema de mailing eficiente y asegurar la escalabilidad del sistema para soportar un gran número de usuarios simultáneamente.
+### Conclusión
 
-## Conclusión
-
-**Bingo App** es una solución integral que permite a los usuarios participar en sorteos de bingo de manera interactiva y segura. La aplicación combina funcionalidad, eficiencia y una excelente experiencia de usuario, garantizando la continuidad del Bingo incluso en tiempos de restricciones. Este proyecto destaca la capacidad de adaptación y la innovación en el desarrollo de aplicaciones web y móviles.
+**Sorteos Webapp** es una solución eficaz para la realización de sorteos en línea, combinando una experiencia de usuario intuitiva con la capacidad de manejar grandes volúmenes de datos. Este proyecto demuestra la habilidad de integrar múltiples funcionalidades en una plataforma cohesiva, cumpliendo con plazos estrictos y requisitos específicos de diseño.

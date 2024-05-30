@@ -100,8 +100,13 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
+        <Link
+          isExternal
+          aria-label="Linkedin"
+          className="text-default-500"
+          href={siteConfig.links.linkedin}
+        >
+          <LinkedInIcon height={20} width={20} />
         </Link>
         <ThemeSwitch />
         <NavbarMenuToggle />
@@ -127,6 +132,7 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
         </div>
+        <LangSwitcher />
       </NavbarMenu>
     </NextUINavbar>
   );

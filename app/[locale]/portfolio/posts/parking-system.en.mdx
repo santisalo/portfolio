@@ -5,35 +5,40 @@ technology: 'HTML, Javascript, CoreUI, PHP'
 imageUrl: '/img/portfolio/parking-system.png'
 publishedAt: '2024-04-12'
 ---
-## Descripción del Proyecto
+## Project Description
 
-**Bingo App** es un proyecto compuesto por un **sitio web estático** y un **panel de control** desarrollado con **Vue.js** y **Laravel**. El sitio web muestra a los usuarios los sorteos anteriores junto con sus grabaciones y los ganadores. También incluye la transmisión en vivo y el monto del pozo acumulado.
+The **Parking System** is a web application designed to efficiently manage a parking business. This system handles vehicle check-ins and check-outs, manages monthly and weekly stays, records customized financial transactions, and generates detailed reports. Additionally, it includes functionalities for fiscal printer billing and electronic invoicing.
 
-Hay dos paneles de control: uno para el usuario y otro para el administrador. El panel de usuario permite comprar créditos, adquirir cartones de bingo, solicitar pagos a CBU, jugar en línea de manera interactiva, entre otras funciones. Por su parte, el administrador del sistema tiene un panel donde puede cargar nuevos sorteos, gestionar parámetros y registrar los resultados. Además, el proyecto cuenta con un sistema de mailing automático para notificar a los ganadores de los sorteos.
+The system is designed to be multi-user, facilitating management for both operators, who handle vehicle check-ins and check-outs, and administrators, who manage reports and long-term stays.
 
-## Funcionalidad
+## Functionality
 
-Los administradores y operadores del negocio, a través del panel de control, pueden:
+### Operators
+Operators can:
 
-- Crear, editar y eliminar sorteos
-- Crear, editar y eliminar usuarios
-- Gestionar pagos
-- Registrar ganadores
-- Vender créditos y cartones de bingo
-- Generar informes
+- **Register vehicle check-ins and check-outs** quickly and efficiently.
+- **Issue customized tickets** using fiscal printers.
+- **Manage temporary vehicle stays**.
 
-Los clientes finales, mediante la webapp, pueden:
+### Administrators
+Administrators have access to:
 
-- Visualizar sus movimientos
-- Visualizar y participar en sorteos
-- Comprar créditos
-- Comprar cartones de bingo
-- Jugar de manera interactiva
+- **User management**: Create, edit, and delete operator accounts.
+- **Reports and statistics**: Generate detailed reports on daily, monthly, and annual operations.
+- **Billing**: Issue electronic invoices through the AFIP API and manage billing through fiscal printers.
+- **Rate configuration**: Set and adjust rates for different types of stays.
 
-## Desafíos
+## Challenges
 
-Este proyecto surgió durante la pandemia y fue crucial para que el Bingo pudiera seguir operando a pesar de las restricciones. Uno de los desafíos principales fue coordinar los sorteos transmitidos por streaming con la sección de juego interactivo en línea. También fue necesario implementar un sistema de mailing eficiente y asegurar la escalabilidad del sistema para soportar un gran número de usuarios simultáneamente.
+### Integration with Fiscal Printers
+One of the main challenges was integrating the system with fiscal printers for issuing customized tickets, which required specific technical development to ensure compatibility and efficient functionality.
 
-## Conclusión
+### Implementation of the AFIP API
+Implementing the AFIP API for electronic invoicing presented significant technical challenges, ensuring compliance with local regulations and smooth integration with the business's billing system.
 
-**Bingo App** es una solución integral que permite a los usuarios participar en sorteos de bingo de manera interactiva y segura. La aplicación combina funcionalidad, eficiencia y una excelente experiencia de usuario, garantizando la continuidad del Bingo incluso en tiempos de restricciones. Este proyecto destaca la capacidad de adaptación y la innovación en el desarrollo de aplicaciones web y móviles.
+### Designing an Agile UI
+Developing a user interface (UI) that allowed rapid and efficient use of the system was crucial, especially to handle peak hours when vehicles enter and exit frequently. This required a focus on usability and minimizing the time needed to register each operation.
+
+## Conclusion
+
+The **Parking System** has proven to be a robust and versatile solution for managing parking businesses, facilitating both daily operations and long-term administration. The combination of advanced functions and an intuitive user interface optimizes workflow and enhances the user experience for both operators and administrators.

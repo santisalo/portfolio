@@ -5,35 +5,41 @@ technology: 'HTML, Javascript, CoreUI, PHP'
 imageUrl: '/img/portfolio/parking-system.png'
 publishedAt: '2024-04-12'
 ---
+
 ## Descripción del Proyecto
 
-**Bingo App** es un proyecto compuesto por un **sitio web estático** y un **panel de control** desarrollado con **Vue.js** y **Laravel**. El sitio web muestra a los usuarios los sorteos anteriores junto con sus grabaciones y los ganadores. También incluye la transmisión en vivo y el monto del pozo acumulado.
+El **Sistema de Estacionamientos** es una aplicación web diseñada para gestionar eficientemente un negocio de estacionamientos. Este sistema permite administrar las entradas y salidas de vehículos, gestionar estadías mensuales y semanales, registrar movimientos de dinero personalizados, y generar informes detallados. Además, incluye funcionalidades de facturación a través de impresora fiscal y facturación electrónica.
 
-Hay dos paneles de control: uno para el usuario y otro para el administrador. El panel de usuario permite comprar créditos, adquirir cartones de bingo, solicitar pagos a CBU, jugar en línea de manera interactiva, entre otras funciones. Por su parte, el administrador del sistema tiene un panel donde puede cargar nuevos sorteos, gestionar parámetros y registrar los resultados. Además, el proyecto cuenta con un sistema de mailing automático para notificar a los ganadores de los sorteos.
+El sistema está concebido para ser multiusuario, facilitando la gestión tanto para operadores, que se encargan de la entrada y salida de vehículos, como para administradores, que manejan informes y estadías prolongadas.
 
 ## Funcionalidad
 
-Los administradores y operadores del negocio, a través del panel de control, pueden:
+### Operadores
+Los operadores pueden:
 
-- Crear, editar y eliminar sorteos
-- Crear, editar y eliminar usuarios
-- Gestionar pagos
-- Registrar ganadores
-- Vender créditos y cartones de bingo
-- Generar informes
+- **Registrar entradas y salidas de vehículos** de manera rápida y eficiente.
+- **Emitir tickets personalizados** mediante impresoras fiscales.
+- **Gestionar estadías temporales** de vehículos.
 
-Los clientes finales, mediante la webapp, pueden:
+### Administradores
+Los administradores tienen acceso a:
 
-- Visualizar sus movimientos
-- Visualizar y participar en sorteos
-- Comprar créditos
-- Comprar cartones de bingo
-- Jugar de manera interactiva
+- **Gestión de usuarios**: Crear, editar y eliminar cuentas de operadores.
+- **Informes y estadísticas**: Generar informes detallados sobre las operaciones diarias, mensuales y anuales.
+- **Facturación**: Emitir facturas electrónicas a través de la API de AFIP y gestionar la facturación a través de impresoras fiscales.
+- **Configuración de tarifas**: Establecer y ajustar tarifas para diferentes tipos de estadías.
 
 ## Desafíos
 
-Este proyecto surgió durante la pandemia y fue crucial para que el Bingo pudiera seguir operando a pesar de las restricciones. Uno de los desafíos principales fue coordinar los sorteos transmitidos por streaming con la sección de juego interactivo en línea. También fue necesario implementar un sistema de mailing eficiente y asegurar la escalabilidad del sistema para soportar un gran número de usuarios simultáneamente.
+### Integración con Impresoras Fiscales
+Uno de los principales desafíos fue integrar el sistema con impresoras fiscales para la emisión de tickets personalizados, lo que requirió un desarrollo técnico específico para asegurar la compatibilidad y funcionalidad eficiente.
+
+### Implementación de la API de AFIP
+La implementación de la API de AFIP para la facturación electrónica presentó desafíos técnicos significativos, asegurando el cumplimiento de las normativas locales y la integración fluida con el sistema de facturación del negocio.
+
+### Diseño de una UI Ágil
+Desarrollar una interfaz de usuario (UI) que permitiera un uso rápido y eficiente del sistema fue crucial, especialmente para manejar las horas pico en las que los vehículos entran y salen con gran frecuencia. Esto implicó un enfoque en la usabilidad y en la minimización del tiempo requerido para registrar cada operación.
 
 ## Conclusión
 
-**Bingo App** es una solución integral que permite a los usuarios participar en sorteos de bingo de manera interactiva y segura. La aplicación combina funcionalidad, eficiencia y una excelente experiencia de usuario, garantizando la continuidad del Bingo incluso en tiempos de restricciones. Este proyecto destaca la capacidad de adaptación y la innovación en el desarrollo de aplicaciones web y móviles.
+El **Sistema de Estacionamientos** se ha demostrado ser una solución robusta y versátil para la gestión de estacionamientos, facilitando tanto las operaciones diarias como la administración a largo plazo. La combinación de funciones avanzadas y una interfaz de usuario intuitiva permite optimizar el flujo de trabajo y mejorar la experiencia de los usuarios, tanto operadores como administradores.

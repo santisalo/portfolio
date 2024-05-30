@@ -5,35 +5,30 @@ technology: 'React, PHP'
 imageUrl: '/img/portfolio/raffle-webapp.png'
 publishedAt: '2024-04-02'
 ---
-## Descripción del Proyecto
+## Project Description
 
-**Bingo App** es un proyecto compuesto por un **sitio web estático** y un **panel de control** desarrollado con **Vue.js** y **Laravel**. El sitio web muestra a los usuarios los sorteos anteriores junto con sus grabaciones y los ganadores. También incluye la transmisión en vivo y el monto del pozo acumulado.
+**Sorteos Webapp** is a web application designed for a company to conduct online raffles, allowing users to enter their personal information and specific product details to participate.
 
-Hay dos paneles de control: uno para el usuario y otro para el administrador. El panel de usuario permite comprar créditos, adquirir cartones de bingo, solicitar pagos a CBU, jugar en línea de manera interactiva, entre otras funciones. Por su parte, el administrador del sistema tiene un panel donde puede cargar nuevos sorteos, gestionar parámetros y registrar los resultados. Además, el proyecto cuenta con un sistema de mailing automático para notificar a los ganadores de los sorteos.
+### Functionality
 
-## Funcionalidad
+1. **Customer Registration:**
+   - The user enters their email.
+   - If the email does not exist in the database, the user is registered with their personal information.
 
-Los administradores y operadores del negocio, a través del panel de control, pueden:
+2. **Raffle Participation:**
+   - The user enters the product code and time.
+   - The user instantly participates in a raffle where they can win one of the preconfigured prizes.
 
-- Crear, editar y eliminar sorteos
-- Crear, editar y eliminar usuarios
-- Gestionar pagos
-- Registrar ganadores
-- Vender créditos y cartones de bingo
-- Generar informes
+3. **Global Raffle:**
+   - All users participate in a global raffle, which takes place when the raffle end date is reached.
 
-Los clientes finales, mediante la webapp, pueden:
+### Challenges
 
-- Visualizar sus movimientos
-- Visualizar y participar en sorteos
-- Comprar créditos
-- Comprar cartones de bingo
-- Jugar de manera interactiva
+The development of **Sorteos Webapp** presented several significant challenges:
 
-## Desafíos
+- **Tight Deadlines:** The project needed to be completed within a limited timeframe, adhering to the design provided by the UX team.
+- **Report Generation:** It was necessary to develop functionalities to generate Excel reports, allowing the company to efficiently collect and analyze participant data.
 
-Este proyecto surgió durante la pandemia y fue crucial para que el Bingo pudiera seguir operando a pesar de las restricciones. Uno de los desafíos principales fue coordinar los sorteos transmitidos por streaming con la sección de juego interactivo en línea. También fue necesario implementar un sistema de mailing eficiente y asegurar la escalabilidad del sistema para soportar un gran número de usuarios simultáneamente.
+### Conclusion
 
-## Conclusión
-
-**Bingo App** es una solución integral que permite a los usuarios participar en sorteos de bingo de manera interactiva y segura. La aplicación combina funcionalidad, eficiencia y una excelente experiencia de usuario, garantizando la continuidad del Bingo incluso en tiempos de restricciones. Este proyecto destaca la capacidad de adaptación y la innovación en el desarrollo de aplicaciones web y móviles.
+**Sorteos Webapp** is an effective solution for conducting online raffles, combining an intuitive user experience with the capability to handle large volumes of data. This project demonstrates the ability to integrate multiple functionalities into a cohesive platform, meeting strict deadlines and specific design requirements.

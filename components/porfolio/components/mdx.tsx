@@ -31,7 +31,7 @@ function CustomLink(props: any) {
 
   if (href.startsWith("/")) {
     return (
-      <Link href={href} {...props}>
+      <Link className="text-blue-500" href={href} {...props}>
         {props.children}
       </Link>
     );

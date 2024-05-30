@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { ViewTransitions } from "next-view-transitions";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Providers } from "./providers";
 
@@ -69,19 +70,29 @@ export default async function LocaleLayout({
                   {children}
                 </main>
                 <footer className="w-full flex items-center justify-center py-3">
+                  <span className="text-default-600">Desarrollado con</span>
                   <Link
                     isExternal
                     className="flex items-center gap-1 text-current"
-                    href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                    title="nextui.org homepage"
+                    href="https://nextjs.org/"
+                    title="Nextjs homepage"
                   >
-                    <span className="text-default-600">Desarrollado con</span>
-                    <p className="text-primary">NextJS y NextUI</p>
+                    <p className="text-primary">&nbsp;NextJS</p>
+                  </Link>
+                  <p>&nbsp;y&nbsp;</p>
+                  <Link
+                    isExternal
+                    className="flex items-center gap-1 text-current"
+                    href="https://nextui.org/"
+                    title="NextUI homepage"
+                  >
+                    <p className="text-primary">NextUI</p>
                   </Link>
                 </footer>
               </div>
             </Providers>
           </NextIntlClientProvider>
+          <SpeedInsights />
         </body>
       </html>
     </ViewTransitions>
