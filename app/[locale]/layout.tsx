@@ -22,6 +22,28 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [
+      {
+        url: "https://www.santiagosalomon.com.ar/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [
+      {
+        url: "https://www.santiagosalomon.com.ar/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
@@ -57,7 +79,7 @@ export default async function LocaleLayout({
         <body
           className={clsx(
             "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable,
+            fontSans.variable
           )}
         >
           <NextIntlClientProvider messages={messages}>
